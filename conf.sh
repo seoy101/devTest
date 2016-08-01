@@ -13,6 +13,8 @@ echo       X11Forwarding no        >> /etc/ssh/sshd_config
 echo       AllowTcpForwarding no   >> /etc/ssh/sshd_config
 echo       ForceCommand internal-sftp >> /etc/ssh/sshd_config
 sudo service ssh restart
+chmod 755 /home/user1
+chown root:root /home/user1
 
 
 # nfs conf
