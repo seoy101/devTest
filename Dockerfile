@@ -7,6 +7,7 @@ RUN apt-get install -y vim
 RUN mkdir /web
 RUN mkdir /shellscript
 VOLUME	/nfsdir
+
 #RUN curl -O http://downloads.typesafe.com/typesafe-activator/1.3.10/typesafe-activator-1.3.10.zip
 #RUN unzip typesafe-activator-1.3.10.zip -d / && rm typesafe-activator-1.3.10.zip && chmod 777 /activator-dist-1.3.10/bin/activator 
 

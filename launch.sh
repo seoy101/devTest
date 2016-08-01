@@ -4,11 +4,11 @@ JOB_NAME=$2
 
 IMAGE_NAME=yuhadam/$2
 
-sudo docker build --tag $IMAGE_NAME $JOBPATH/
+sudo docker build --tag "$IMAGE_NAME" "$JOBPATH"/
 
 sudo docker login -u yuhadam -p k9460180
 
-sudo docker push $IMAGE_NAME
+sudo docker push "$IMAGE_NAME"
 
 echo	'{' > $JOBPATH/docker.json
 echo 	'"schedule": "R1/2014-09-25T17:22:00Z/PT2M",' >> $JOBPATH/docker.json
