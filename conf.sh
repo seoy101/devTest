@@ -5,16 +5,15 @@ sudo service docker start
 # sftp conf 
 
 groupadd sftp
-sed -i 's/Subsystem/#Subsystem/' /etc/ssh/sshd_config
-echo Subsystem     sftp    internal-sftp >> /etc/ssh/sshd_config
+#sed -i 's/Subsystem/#Subsystem/' /etc/ssh/sshd_config
+#echo Subsystem     sftp    internal-sftp >> /etc/ssh/sshd_config
 echo Match Group sftp >> /etc/ssh/sshd_config
 echo       ChrootDirectory /home/%u >> /etc/ssh/sshd_config
 echo       X11Forwarding no        >> /etc/ssh/sshd_config
 echo       AllowTcpForwarding no   >> /etc/ssh/sshd_config
 echo       ForceCommand internal-sftp >> /etc/ssh/sshd_config
 sudo service ssh restart
-chmod 755 /home/user1
-chown root:root /home/user1
+
 
 
 # nfs conf

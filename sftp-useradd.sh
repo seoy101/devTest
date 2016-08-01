@@ -3,7 +3,7 @@
 USER=$1
 PASSWD=$2
 
-sudo useradd -g sftp -m -s /sbin/nologin "$USER" 
+sudo useradd -g sftp -m -d /home/"$USER" -s /sbin/nologin "$USER" 
 
 echo "$USER:$PASSWD" | chpasswd
 
