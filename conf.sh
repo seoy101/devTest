@@ -5,8 +5,12 @@ sudo service docker start
 # sftp conf 
 
 groupadd sftp
-#sed -i 's/Subsystem/#Subsystem/' /etc/ssh/sshd_config
-#echo Subsystem     sftp    internal-sftp >> /etc/ssh/sshd_config
+sed -i 's/Subsystem/#Subsystem/' /etc/ssh/sshd_config
+sed -i 's/Port/#Port/' /etc/ssh/sshd_config
+sed -i 's/UsePAM/#UsePAM/' /etc/ssh/sshd_config
+echo Port 1025 >> /etc/ssh/sshd_config
+echo AllowGroups sftp sftp >> /etc/ssh/sshd_config
+echo Subsystem     sftp    internal-sftp >> /etc/ssh/sshd_config
 echo Match Group sftp >> /etc/ssh/sshd_config
 echo       ChrootDirectory /home/%u >> /etc/ssh/sshd_config
 echo       X11Forwarding no        >> /etc/ssh/sshd_config

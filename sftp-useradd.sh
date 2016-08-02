@@ -3,13 +3,13 @@
 USER=$1
 PASSWD=$2
 
-sudo useradd -g sftp -m -d /home/"$USER" -s /sbin/nologin "$USER" 
+sudo useradd -g sftp -m "$USER" 
 
 echo "$USER:$PASSWD" | chpasswd
 
-sudo chown root:root /home/"$USER"
+sudo chown root:sftp /home/"$USER"
 
-sudo chmod 755 /home/"$USER"
+sudo chmod 750 /home/"$USER"
 
 sudo service ssh restart
 
