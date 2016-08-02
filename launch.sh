@@ -31,6 +31,6 @@ echo  '"uris": [],' >> $JOBPATH/docker.json
 echo  '"command":' "\"$JOBPATH/innerSh.sh\"" >> $JOBPATH/docker.json
 echo '}' >> $JOBPATH/docker.json
 
-sudo curl -L -H Content-Type: application/json -X POST -d @docker.json 192.168.65.131:18584/scheduler/iso8601
+sudo curl -L -H 'Content-Type: application/json' -X POST -d @docker.json 192.168.65.111:15410/scheduler/iso8601
 
-sudo curl -L -X PUT chronos-node:8080/scheduler/job/$JOB_NAME
+sudo curl -L -X PUT 192.168.65.111:15410/scheduler/job/$JOB_NAME

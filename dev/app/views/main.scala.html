@@ -1,0 +1,41 @@
+@*
+ * This template is called from the `index` template. This template
+ * handles the rendering of the page header and body tags. It takes
+ * two arguments, a `String` for the title of the page and an `Html`
+ * object to insert into the body of the page.
+ *@
+@(title: String)(content: Html)(implicit messages:Messages)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <title>@title</title>
+        <link rel="stylesheet" type="text/css" media="screen" href='@routes.Assets.versioned("lib/bootstrap/css/bootstrap.css")'>
+    	 <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+		 <script src="//code.jquery.com/jquery.min.js"></script>
+	</head>
+  	<body>
+  		<div class="screenshot">
+    		<div class="navbar navbar-inverse navbar-fixed-top">
+      			<div class="navbar-header">
+        			<a class="navbar-brand" href="@routes.HomeController.index()">
+          				@Messages("application.name")
+        			</a>
+      			</div>
+      			<div class="collapse navbar-collapse" id="analysis-data">
+      				<ul class="nav navbar-nav">
+      					<li class="active">
+      						<a href="@routes.LaunchController.analysis()">@Messages("analysis.data")</a>
+      					</li>
+      					
+      				</ul>
+      			</div>
+    		</div>
+    		<div class="container">
+      			@content
+      		</div>
+  		</div>
+  </body>
+
+</html>
