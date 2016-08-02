@@ -139,7 +139,7 @@ class LaunchController @Inject() (val messagesApi:MessagesApi) extends Controlle
      bw.newLine()
      bw.write("rm innerSh.sh")
      bw.newLine()
-     bw.write("curl 175.158.15.45:9000/result/"+job_name)
+     bw.write("curl 192.168.65.90:9000/result/"+job_name)
      bw.newLine()
     // bw.newLine()
      /////////curl 추가 
