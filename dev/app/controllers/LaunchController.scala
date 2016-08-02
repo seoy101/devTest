@@ -84,7 +84,7 @@ class LaunchController @Inject() (val messagesApi:MessagesApi) extends Controlle
     implicit request =>
    
  //      data.split("|").foreach(file => Process("cp -r /nfsdir/"+file+" /home/user1/").run)
-      val result=Seq("mv","-f",data,"/home/user1")
+      val result=Seq("mv","-f","/nfsdir/"+data,"/home/user1")
       Process(result).run 
       Ok("ok")
        
