@@ -45,7 +45,6 @@ ADD MT.fa /nfsdir/
 
 
 #ENV PATH $PATH:/activator-dist-1.3.10/bin/
-EXPOSE 9000 8888 22
 WORKDIR /shellscript/
 CMD ./conf.sh
 

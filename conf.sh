@@ -1,4 +1,4 @@
-#bin/sh
+#!bin/sh
 #docker registry server
 
 sudo service docker start
@@ -31,7 +31,7 @@ chmod 777 /nfsdir
 
 service rpcbind start
 service nfs-kernel-server start
-
+apt-mark hold nfs-kernel-server
 
 
 cd /web/bin/
