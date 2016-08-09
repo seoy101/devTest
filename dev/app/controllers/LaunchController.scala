@@ -109,7 +109,7 @@ class LaunchController @Inject() (val messagesApi:MessagesApi) extends Controlle
      bw.newLine()
      bw.write("rm innerSh.sh")
      bw.newLine()
-     bw.write("curl 211.249.63.201:80/result/"+job_name)
+     bw.write("curl 211.249.63.201:9000/result/"+job_name)
      bw.newLine()
      bw.close()
      Process("sudo chmod 777 "+file_path+"/innerSh.sh").run
