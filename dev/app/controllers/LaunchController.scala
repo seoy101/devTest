@@ -35,7 +35,7 @@ class LaunchController @Inject() (val messagesApi:MessagesApi) extends Controlle
       val bwa=BwaForm.bindFromRequest()
        bwa.fold(
            hasErrors=> Ok("input error")
-           , success=> {           
+           , success= { newBwa=>           
                         
                           val useradd=Seq("sftp-useradd.sh","user1","1111")
                           Process(useradd).run
@@ -48,12 +48,8 @@ class LaunchController @Inject() (val messagesApi:MessagesApi) extends Controlle
                           Process("chmod 777 "+job_path).run    
                           Process("touch "+job_path+"/innerSh.sh").run
                           Process("touch "+job_path+"/Dockerfile").run
-                            
-                         
-                          bwa.data.keys.foreach{
-                                  option =>Bwa.createCmd(bwa.data(option))
-                              }
-                          val cmd =Bwa.cmd
+                          
+                          val cmd=Bwa.getCmd(newBwa)
                           
                           writingInnerSh(job_path,exe_name,data_name,job_name,cmd+data_name )
                           writingDockerfile(job_path)
