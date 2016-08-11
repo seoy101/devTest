@@ -1,0 +1,858 @@
+@* index Template File *@
+@(param: Any)
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>프로젝트</title>
+<link href="@routes.Assets.versioned("css/bootstrap.min.css")" rel="stylesheet">
+<link href="@routes.Assets.versioned("css/jquery-ui.min.css")" rel="stylesheet">
+<link href="@routes.Assets.versioned("css//index.css")" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="nav_sec floatClear">	
+			<h1 class="head_tit"><a href="#">Project</a></h1>
+            <ul class="navi floatClear">
+                <li class="on"><a href="#" >About</a></li>
+                <li ><a href="#" >Works</a></li>
+                <li ><a href="#" >Plan</a></li>
+                <li ><a href="#p" >Board</a></li>
+            </ul>
+		</div>
+    </div>
+    <div class="container_sec">
+    	<div class="left_sec">
+        	<form role="form" data-initer="chk_form" data-toggle="validator" class="custom_inp" data-action="initPage" >
+                <ul class="menu_list floatClear">
+                    <li class="open">
+                        <a href="#" class="gradient_bg">menu 1 </a>
+                        <ul class="chk_list floatClear">
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="bwa" value="bwa" /><label for="bwa" >BWA</label></li>
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="check1_2" value="check1_2" /><label for="check1_2" >Check 2</label></li>
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="check1_3" value="check1_3" /><label for="check1_3" >Check 3</label></li>
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="check1_4" value="check1_4" /><label for="check1_4" >Check 4</label></li>
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="check1_5" value="check1_5" /><label for="check1_5" >Check 5</label></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="gradient_bg">menu 2 </a>
+                        <ul class="chk_list floatClear">
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="check2_1" value="check2_1" /><label for="check2_1" >Check 1</label></li>
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="check2_2" value="check2_2" /><label for="check2_2" >Check 2</label></li>
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="check2_3" value="check2_3" /><label for="check2_3" >Check 3</label></li>
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="check2_4" value="check2_4" /><label for="check2_4" >Check 4</label></li>
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="check2_5" value="check2_5" /><label for="check2_5" >Check 5</label></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="gradient_bg">menu 3 </a>
+                        <ul class="chk_list floatClear">
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="check3_1" value="check3_1" /><label for="check3_1" >Check 1</label></li>
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="check3_2" value="check3_2" /><label for="check3_2" >Check 2</label></li>
+                            <li><input type="checkbox" name="checker" class="custom_inp" id="check3_3" value="check3_3" /><label for="check3_3" >Check 3</label></li>
+                        </ul>
+                    </li>
+                </ul>
+            	<button class="btn_init gradient_bg" type="submit" data-initer="init">init</button>
+            </form>
+            
+        </div>
+        <div class="contents" data-initer="layer">
+            
+            
+            <div class="page block" data-initer="initialization" >
+            	<h1 class="hiddenFloat">초기화면</h1>
+                <div class="text_center">
+                    <div class="blank"></div>
+                    <div class="text">왼쪽 체크박스를 체크 후 init 버튼을 누르십시오</div>
+                </div>
+            </div>
+            
+            <div class="page" data-initer="bwa" >
+            	<h1>BWA</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+<li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            
+            
+            <div class="page" data-initer="check1_2" >
+            	<h1>check1_2 job</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            
+            <div class="page" data-initer="check1_3" >
+            	<h1>check1_3 job</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            
+            <div class="page" data-initer="check1_4" >
+            	<h1>check1_4 job</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            
+            <div class="page" data-initer="check1_5" >
+            	<h1>check1_5 job</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            
+            <div class="page" data-initer="check2_1" >
+            	<h1>check2_1 job</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            
+            <div class="page" data-initer="check2_2" >
+            	<h1>check2_2 job</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+			
+            <div class="page" data-initer="check2_3" >
+            	<h1>check2_3 job</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            
+            <div class="page" data-initer="check2_4" >
+            	<h1>check2_4 job</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            
+            <div class="page" data-initer="check2_5" >
+            	<h1>check2_5 job</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            
+            <div class="page" data-initer="check3_1" >
+            	<h1>check3_1 job</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            
+            
+            <div class="page" data-initer="check3_2" >
+            	<h1>check3_2 job</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            
+            <div class="page" data-initer="check3_3" >
+            	<h1>check3_3 job</h1>
+                <div class="sections">
+                    <form role="form" data-toggle="validator" class="custom_inp" data-action="ajax" data-url="../html/ajax.html">
+                        <ul class="ul_table">
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 1 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">입력폼 2 </span> 
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="uesername" data-error="필수 항목입니다" required>
+                                </div></li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">체크항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="checkbox" class="custom_inp" id="chk1" name="checker1" /><label for="chk1">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk2" name="checker2" /><label for="chk2">체크박스</label>
+                                        <input type="checkbox" class="custom_inp" id="chk3" name="checker3" /><label for="chk3">체크박스</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">라디오항목 </span>
+                                    <div type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <input type="radio" class="custom_inp" id="rdo1" name="radio" /><label for="rdo1">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo2" name="radio" /><label for="rdo2">라디오항목</label>
+                                        <input type="radio" class="custom_inp" id="rdo3" name="radio" /><label for="rdo3">라디오항목</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">셀렉트박스</span>
+                                    <div type="text" class="form-control nopadding" placeholder="Username" aria-describedby="sizing-addon2">
+                                        <select class="custom_inp" name="selector">
+                                            <option>선택항목1</option>
+                                            <option>선택항목2</option>
+                                            <option>선택항목3</option>
+                                            <option>선택항목4</option>
+                                            <option>선택항목5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="btn_group">
+                        	<a href="#" class="custom_inp" data-initer="prev" >prev</a>
+                        	<a href="#" class="custom_inp" data-initer="next">next</a>
+                        	<button type="submit" class="custom_inp gradient_bg">job submit</button>
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+<script src="@routes.Assets.versioned("js/jquery-1.11.2.js")"></script>
+<script src="@routes.Assets.versioned("js/jquery-ui.min.js")"></script>
+<script src="@routes.Assets.versioned("js/bootstrap.min.js")"></script>
+<script src="@routes.Assets.versioned("js/validator.js")"></script>
+<script src="@routes.Assets.versioned("js/index.js")"></script>
+
+</body>
+</html>

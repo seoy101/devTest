@@ -21,9 +21,9 @@ class LaunchController @Inject() (val messagesApi:MessagesApi) extends Controlle
                                                       ) 
  
   
-  def home= Action{
+  def index= Action{
     implicit request =>
-      Ok(views.html.home())
+      Ok(views.html.index())
   }
   
   def analysis = Action{

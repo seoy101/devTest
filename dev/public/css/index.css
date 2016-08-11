@@ -1,0 +1,168 @@
+/* reset css */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, img, ins, kbd, q, s, samp, small, strike, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th {margin:0;padding:0;border:0; /*outline:0;*/ font-size:12px;  vertical-align:middle;background:transparent; word-break:break-all; }
+textarea, select, input {margin:0;padding:0;font-size:12px;}
+
+ol, ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after {content:""; content:none;}
+table {border-collapse:collapse;border-spacing:0;}
+legend {display:none; text-indent:-1000px; height:0px; font-size:0; line-height:0;}
+body {/*overflow:hidden;*/ height:100%; }
+html {/*overflow:hidden; height:100%;*/ }
+body, textarea, select, input, button, option {font-size:12px; font-family: "Nanum gothic","나눔고딕","돋움","dotum","Trebuchet MS","Lucida Grande","Tahoma","Helvetica","Arial",sans-serif; vertical-align:middle; color:#000;}
+a {color:#333;text-decoration:none;}
+a:hover {color:#888;text-decoration:underline;}
+/**/
+select, option {color:#888;}
+/* reset css 끝 */
+
+
+/* 예약어 */
+.hiddenFloat {position:absolute; left:-2400px; }
+.floatClear:after {content:""; display:block; clear:both; }
+.none {display:none; }
+.gradient_bg {color:#1ccb05;
+	background: #fafafa; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  #ffffff 1%, #f7f5f5 67%, #eaeaea 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#ffffff), color-stop(67%,#f7f5f5), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* IE10+ */
+	background: linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=1 );}
+.nopadding {padding:0; }
+.wrapper .block {display:block; }
+/* 예약어끝 */
+
+
+
+
+
+
+/* 컴포넌트 */
+.custom_inp[type=checkbox] {position:absolute; left:-2400px; display:none; }
+.custom_inp[type=checkbox] + label {position:relative; color:#888; font-size:12px; font-family:"Arial", "Helvetica", "sans-serif"; font-weight:normal; text-decoration:none; padding-left:18px; cursor:pointer; margin-right:10px; }
+.custom_inp[type=checkbox] + label:before {content:""; position:absolute; left:0px; top:50%; width:12px; height:12px; margin-top:-7px; border:1px solid #ccc; border-radius:2px; box-sizing:border-box }
+.custom_inp[type=checkbox]:checked +label:before {background-color:#090; }
+
+.custom_inp[type=radio] {position:absolute; left:-2400px; display:none; }
+.custom_inp[type=radio] + label {position:relative; color:#888; font-size:12px; font-family:"Arial", "Helvetica", "sans-serif"; font-weight:normal; text-decoration:none; padding-left:18px; cursor:pointer; margin-right:10px; }
+.custom_inp[type=radio] + label:before {content:""; position:absolute; left:0px; top:50%; width:12px; height:12px; margin-top:-7px; border:1px solid #ccc; border-radius:12px; box-sizing:border-box }
+.custom_inp[type=radio]:checked +label:before {background-color:#090; }
+
+select.custom_inp {border:none; width:100%; height:32px; line-height:1.4; font-size:12px; font-family:"Arial", "Helvetica", "sans-serif"; padding:5px 10px; box-sizing:border-box; border-radius:0 4px 4px 0; }
+
+button.custom_inp {font-size:12px; font-family:"Arial", "Helvetica", "sans-serif"; border:1px solid #ccc; border-radius:5px; background-color:#fff; padding:0px 10px; line-height:30px; }
+a.custom_inp {display:inline-block; font-size:12px; font-family:"Arial", "Helvetica", "sans-serif"; border:1px solid #ccc; border-radius:5px; background-color:#fff; padding:0px 10px; line-height:30px;}
+
+/* 컴포넌트 끝 */
+
+
+
+
+
+
+
+
+
+/* layout */
+.wrapper {min-width:1000px;}
+.header {position:fixed; top:0; left:0; right:0; border-bottom:1px solid #ccc; background-color:#fff; z-index:31; }
+.header .head_tit a { font-size:14px; font-weight:bold; font-family:"Nanum gothic","나눔고딕","돋움","dotum","Trebuchet MS","Lucida Grande","Tahoma","Helvetica","Arial",sans-serif; line-height:30px; padding:0 50px;  }
+.header .navi {position:absolute; top:0px; right:0;  z-index:30; min-width:600px; }
+.header .navi li:first-child {border-left:1px solid #ccc;}
+.header .navi li {float:left; border-right:1px solid #ccc; width:140px; height:30px; background-color:#fff; }
+.header .navi li a {display:block; color:#888; font-size:12px; font-family:"Arial", "Helvetica", "sans-serif"; font-weight:normal; text-decoration:none; padding-left:18px; margin:1px; line-height:28px; /*	transition:all 0.5s ease;*/}
+.header .navi li a:hover {
+	color:#1ccb05;
+	background: #fafafa; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  #ffffff 1%, #f7f5f5 67%, #eaeaea 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#ffffff), color-stop(67%,#f7f5f5), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* IE10+ */
+	background: linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.header .navi li.on a {
+	color:#1ccb05;
+	background: #fafafa; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  #ffffff 1%, #f7f5f5 67%, #eaeaea 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#ffffff), color-stop(67%,#f7f5f5), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* IE10+ */
+	background: linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+.wrapper .container_sec:after {content:""; diplay:block; clear:both; }
+.wrapper .container_sec .left_sec {position:fixed; top:30px; left:0; bottom:0; width:150px; border-right:1px solid #ccc; box-sizing:border-box;
+ overflow:auto; overflow-x: hidden; }
+
+
+.menu_list a {display:block; color:#888; font-size:12px; font-family:"Arial", "Helvetica", "sans-serif"; font-weight:normal; text-decoration:none; padding-left:24px; margin:1px; line-height:28px; cursor:pointer; border-bottom:1px solid #ededed; }
+.menu_list li input {position:absolute; left:-100px; }
+
+
+.open .chk_list li {height:30px; transition:height 0.5s ease;}
+.chk_list li {position:relative; transition:height 0.5s ease; height:0px; overflow:hidden; background-color:#fff;}
+.chk_list li .custom_inp[type=checkbox] + label {display:block; color:#888; font-size:12px; font-family:"Arial", "Helvetica", "sans-serif"; font-weight:normal; text-decoration:none; padding-left:36px; margin:1px; line-height:28px; }
+.chk_list li .custom_inp[type=checkbox] + label:before {left:16px;}
+.chk_list li .custom_inp[type=checkbox] + label:hover {
+	color:#1ccb05;
+	background: #fafafa; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  #ffffff 1%, #f7f5f5 67%, #eaeaea 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#ffffff), color-stop(67%,#f7f5f5), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* IE10+ */
+	background: linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.chk_list li.on .custom_inp[type=checkbox] + label {
+	color:#1ccb05;
+	background: #fafafa; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  #ffffff 1%, #f7f5f5 67%, #eaeaea 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#ffffff), color-stop(67%,#f7f5f5), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* IE10+ */
+	background: linear-gradient(45deg,  #ffffff 1%,#f7f5f5 67%,#eaeaea 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+
+
+.wrapper .container_sec .left_sec .btn_init {display:block; width:140px; margin:5px; box-sizing:border-box; background-color:#fff; border:1px solid #ededed; padding:5px 15px; text-align:center; }
+
+.ul_table li {padding:5px 0;}
+
+.wrapper .container_sec .contents {position:fixed; top:45px; right:15px; bottom:15px; left:165px; border:1px solid #ededed; overflow:auto; overflow-x: hidden; }
+
+.wrapper .container_sec .contents > div { padding:15px; box-sizing:border-box; }
+.wrapper .container_sec .contents > div h1 {font-size:25px; font-family: "Nanum gothic","나눔고딕","돋움","dotum","Trebuchet MS","Lucida Grande","Tahoma","Helvetica","Arial",sans-serif; padding:20px 10px;}
+
+.page {display:none; position:absolute; top:0; left:0; bottom:0; width:100%; overflow-y:auto; }
+.page .text_center {text-align:center; position:absolute; top:0; left:0; bottom:0; right:0;  }
+.page .text_center .blank {display:inline-block; vertical-align:middle; width:0; height:100%; overflow:hidden;}
+.page .text_center .text {display:inline-block; vertical-align:middle; }
+
+.page .btn_group {margin-top:20px; text-align:right;}
+
+
+
+
+
+
+.wrapper .footer {}
+
+@media all and (min-width : 768px) and (max-width : 1024) {
+
+}
+
+@media all and (max-width : 767px) {
+
+}

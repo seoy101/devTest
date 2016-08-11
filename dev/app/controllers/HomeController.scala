@@ -18,7 +18,8 @@ class HomeController @Inject() extends Controller {
    * a path of `/`.
    */
   def index = Action {
-    Redirect(routes.LaunchController.home())
+    Redirect(routes.LaunchController.index())
+   // Ok(views.html.index())
   }
 
 }
