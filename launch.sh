@@ -31,3 +31,5 @@ echo  '"uris": [],' >> $JOBPATH/docker.json
 echo  '"command":' "\"$JOBPATH/innerSh.sh\"" >> $JOBPATH/docker.json
 echo '}' >> $JOBPATH/docker.json
 cd $JOBPATH
+/scheduler/iso8601
+/scheduler/job/$JOB_NAME
