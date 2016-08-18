@@ -89,7 +89,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="controllers.LaunchController#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(messagesApi:play.api.i18n.MessagesApi):controllers.LaunchController"></a>
+      <a id="&lt;init&gt;()(implicitsystem:akka.actor.ActorSystem,implicitmaterializer:akka.stream.Materializer,implicitmessagesApi:play.api.i18n.MessagesApi):controllers.LaunchController"></a>
       <a id="&lt;init&gt;:LaunchController"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -97,10 +97,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">LaunchController</span><span class="params">(<span name="messagesApi">messagesApi: <span class="extype" name="play.api.i18n.MessagesApi">MessagesApi</span></span>)</span>
+        <span class="name">LaunchController</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="system">system: <span class="extype" name="akka.actor.ActorSystem">ActorSystem</span></span>, <span name="materializer">materializer: <span class="extype" name="akka.stream.Materializer">Materializer</span></span>, <span name="messagesApi">messagesApi: <span class="extype" name="play.api.i18n.MessagesApi">MessagesApi</span></span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../index.html#controllers.LaunchController@&lt;init&gt;(messagesApi:play.api.i18n.MessagesApi):controllers.LaunchController" title="Permalink" target="_top">
+      <a href="../index.html#controllers.LaunchController@&lt;init&gt;()(implicitsystem:akka.actor.ActorSystem,implicitmaterializer:akka.stream.Materializer,implicitmessagesApi:play.api.i18n.MessagesApi):controllers.LaunchController" title="Permalink" target="_top">
         <img src="../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -113,7 +113,24 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="play.api.i18n.I18nSupport.ResultWithLang" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="controllers.LaunchController.FilePartHandler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FilePartHandler[A]=play.core.parsers.Multipart.FileInfo=&gt;play.api.libs.streams.Accumulator[akka.util.ByteString,play.api.mvc.MultipartFormData.FilePart[A]]"></a>
+      <a id="FilePartHandler[A]:FilePartHandler[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FilePartHandler</span><span class="tparams">[<span name="A">A</span>]</span><span class="result"> = (<span class="extype" name="play.core.parsers.Multipart.FileInfo">FileInfo</span>) ⇒ <span class="extype" name="play.api.libs.streams.Accumulator">Accumulator</span>[<span class="extype" name="akka.util.ByteString">ByteString</span>, <span class="extype" name="play.api.mvc.MultipartFormData.FilePart">FilePart</span>[<span class="extype" name="controllers.LaunchController.FilePartHandler.A">A</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#controllers.LaunchController@FilePartHandler[A]=play.core.parsers.Multipart.FileInfo=&gt;play.api.libs.streams.Accumulator[akka.util.ByteString,play.api.mvc.MultipartFormData.FilePart[A]]" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="play.api.i18n.I18nSupport.ResultWithLang" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ResultWithLangextendsAnyRef"></a>
       <a id="ResultWithLang:ResultWithLang"></a>
       <h4 class="signature">
@@ -3254,6 +3271,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="controllers.LaunchController#fileupload" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fileupload:play.api.mvc.Action[play.api.mvc.AnyContent]"></a>
+      <a id="fileupload:Action[AnyContent]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fileupload</span><span class="result">: <span class="extype" name="play.api.mvc.Action">Action</span>[<span class="extype" name="play.api.mvc.AnyContent">AnyContent</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#controllers.LaunchController@fileupload:play.api.mvc.Action[play.api.mvc.AnyContent]" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -3294,6 +3328,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="controllers.LaunchController#handleFilePartAsFile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="handleFilePartAsFile:LaunchController.this.FilePartHandler[java.io.File]"></a>
+      <a id="handleFilePartAsFile:FilePartHandler[File]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handleFilePartAsFile</span><span class="result">: <a href="#FilePartHandler[A]=play.core.parsers.Multipart.FileInfo=&gt;play.api.libs.streams.Accumulator[akka.util.ByteString,play.api.mvc.MultipartFormData.FilePart[A]]" class="extmbr" name="controllers.LaunchController.FilePartHandler">FilePartHandler</a>[<span class="extype" name="java.io.File">File</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#controllers.LaunchController@handleFilePartAsFile:LaunchController.this.FilePartHandler[java.io.File]" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -3311,19 +3362,19 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="controllers.LaunchController#home" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="home:play.api.mvc.Action[play.api.mvc.AnyContent]"></a>
-      <a id="home:Action[AnyContent]"></a>
+    </li><li name="controllers.LaunchController#index" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="index:play.api.mvc.Action[play.api.mvc.AnyContent]"></a>
+      <a id="index:Action[AnyContent]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">home</span><span class="result">: <span class="extype" name="play.api.mvc.Action">Action</span>[<span class="extype" name="play.api.mvc.AnyContent">AnyContent</span>]</span>
+        <span class="name">index</span><span class="result">: <span class="extype" name="play.api.mvc.Action">Action</span>[<span class="extype" name="play.api.mvc.AnyContent">AnyContent</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../index.html#controllers.LaunchController@home:play.api.mvc.Action[play.api.mvc.AnyContent]" title="Permalink" target="_top">
+      <a href="../index.html#controllers.LaunchController@index:play.api.mvc.Action[play.api.mvc.AnyContent]" title="Permalink" target="_top">
         <img src="../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
@@ -3384,7 +3435,7 @@
       <a id="messagesApi:MessagesApi"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">implicit </span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
@@ -3447,6 +3498,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="play.api.mvc.BodyParsers.parse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parse"></a>
+      <a id="parse:parse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parse</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#controllers.LaunchController@parse" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BodyParsers</dd></dl></div>
     </li><li name="play.api.i18n.I18nSupport#request2Messages" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="request2Messages(implicitrequest:play.api.mvc.RequestHeader):play.api.i18n.Messages"></a>
       <a id="request2Messages(RequestHeader):Messages"></a>
@@ -3566,6 +3634,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="controllers.LaunchController#uploadCustom" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="uploadCustom:play.api.mvc.Action[play.api.mvc.MultipartFormData[java.io.File]]"></a>
+      <a id="uploadCustom:Action[MultipartFormData[File]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">uploadCustom</span><span class="result">: <span class="extype" name="play.api.mvc.Action">Action</span>[<span class="extype" name="play.api.mvc.MultipartFormData">MultipartFormData</span>[<span class="extype" name="java.io.File">File</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#controllers.LaunchController@uploadCustom:play.api.mvc.Action[play.api.mvc.MultipartFormData[java.io.File]]" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
